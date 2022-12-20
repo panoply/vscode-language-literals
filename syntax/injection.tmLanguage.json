@@ -1,0 +1,10 @@
+{
+  "fileTypes": [],
+  "scopeName": "inline.template-tagged-languages.injection",
+  "injectionSelector": "L:source.js (meta.embedded.block.css, meta.embedded.block.markup, meta.embedded.block.xml, meta.embedded.block.yaml, meta.embedded.block.js, meta.embedded.block.json,meta.embedded.block.jsonc, meta.embedded.block.less, meta.embedded.block.md, meta.embedded.block.scss, meta.embedded.block.ts, meta.embedded.block.tsx), L:source.jsx (meta.embedded.block.css, meta.embedded.block.markup, meta.embedded.block.xml, meta.embedded.block.yaml, meta.embedded.block.js, meta.embedded.block.json, meta.embedded.block.jsonc, meta.embedded.block.less, meta.embedded.block.md, meta.embedded.block.scss, meta.embedded.block.ts, meta.embedded.block.tsx), L:source.js.jsx (meta.embedded.block.css, meta.embedded.block.markup, meta.embedded.block.xml, meta.embedded.block.yaml, meta.embedded.block.js, meta.embedded.block.json, meta.embedded.block.jsonc, meta.embedded.block.less, meta.embedded.block.md, meta.embedded.block.scss, meta.embedded.block.ts, meta.embedded.block.tsx), L:source.ts (meta.embedded.block.css, meta.embedded.block.markup, meta.embedded.block.xml, meta.embedded.block.yaml, meta.embedded.block.js, meta.embedded.block.json, meta.embedded.block.less, meta.embedded.block.md, meta.embedded.block.scss, meta.embedded.block.ts, meta.embedded.block.tsx), L:source.tsx (meta.embedded.block.css, meta.embedded.block.markup, meta.embedded.block.xml, meta.embedded.block.yaml, meta.embedded.block.js, meta.embedded.block.json, meta.embedded.block.jsonc, meta.embedded.block.less, meta.embedded.block.md, meta.embedded.block.scss, meta.embedded.block.ts, meta.embedded.block.tsx)",
+  "patterns": [
+    {
+      "include": "source.ts#template-substitution-element"
+    }
+  ]
+}

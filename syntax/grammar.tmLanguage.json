@@ -1,0 +1,313 @@
+{
+  "fileTypes": [],
+  "scopeName": "inline.template-language-literals",
+  "injectionSelector": "L:source.js -comment -(string - meta.embedded), L:source.jsx -comment -(string - meta.embedded), L:source.js.jsx -comment -(string - meta.embedded), L:source.ts -comment -(string - meta.embedded), L:source.tsx -comment -(string - meta.embedded)",
+  "patterns": [
+    {
+      "include": "#literal-markup"
+    },
+    {
+      "include": "#literal-xml"
+    },
+    {
+      "include": "#literal-css"
+    },
+    {
+      "include": "#literal-xml"
+    },
+    {
+      "include": "#literal-yaml"
+    },
+    {
+      "include": "#literal-js"
+    },
+    {
+      "include": "#literal-json"
+    },
+    {
+      "include": "#literal-jsonc"
+    },
+    {
+      "include": "#literal-less"
+    },
+    {
+      "include": "#literal-md"
+    },
+    {
+      "include": "#literal-scss"
+    },
+    {
+      "include": "#literal-ts"
+    },
+    {
+      "include": "#literal-tsx"
+    }
+  ],
+  "repository": {
+    "literal-css": {
+      "name": "string.js.taggedTemplate.literal.css",
+      "contentName": "meta.embedded.block.css",
+      "begin": "(\\b(?:css)\\b)(`)",
+      "beginCaptures": {
+        "1": {
+          "name": "entity.name.function.tagged-template.js"
+        },
+        "2": {
+          "name": "punctuation.definition.string.template.begin.js"
+        }
+      },
+      "end": "(`)",
+      "patterns": [
+        {
+          "include": "source.css"
+        },
+        {
+          "match": "."
+        }
+      ]
+    },
+    "literal-markup": {
+      "name": "string.js.taggedTemplate.literal.markup",
+      "contentName": "meta.embedded.block.markup",
+      "begin": "(\\b(?:html|xhtml)\\b)(`)",
+      "beginCaptures": {
+        "1": {
+          "name": "entity.name.function.tagged-template.js"
+        },
+        "2": {
+          "name": "punctuation.definition.string.template.begin.js"
+        }
+      },
+      "end": "(`)",
+      "patterns": [
+        {
+          "include": "text.html.basic"
+        },
+        {
+          "match": "."
+        }
+      ]
+    },
+    "literal-xml": {
+      "name": "string.js.taggedTemplate.literal.xml",
+      "contentName": "meta.embedded.block.xml",
+      "begin": "(\\b(?:xml)\\b)(`)",
+      "beginCaptures": {
+        "1": {
+          "name": "entity.name.function.tagged-template.js"
+        },
+        "2": {
+          "name": "punctuation.definition.string.template.begin.js"
+        }
+      },
+      "end": "(`)",
+      "patterns": [
+        {
+          "include": "text.xml"
+        },
+        {
+          "match": "."
+        }
+      ]
+    },
+    "literal-yaml": {
+      "name": "string.js.taggedTemplate.literal.yaml",
+      "contentName": "meta.embedded.block.yaml",
+      "begin": "(\\b(?:yaml)\\b)(`)",
+      "beginCaptures": {
+        "1": {
+          "name": "entity.name.function.tagged-template.js"
+        },
+        "2": {
+          "name": "punctuation.definition.string.template.begin.js"
+        }
+      },
+      "end": "(`)",
+      "patterns": [
+        {
+          "include": "source.yaml"
+        },
+        {
+          "match": "."
+        }
+      ]
+    },
+    "literal-js": {
+      "name": "string.js.taggedTemplate.literal.js",
+      "contentName": "meta.embedded.block.js",
+      "begin": "(\\b(?:js|jsx)\\b)(`)",
+      "beginCaptures": {
+        "1": {
+          "name": "entity.name.function.tagged-template.js"
+        },
+        "2": {
+          "name": "punctuation.definition.string.template.begin.js"
+        }
+      },
+      "end": "(`)",
+      "patterns": [
+        {
+          "include": "source.js"
+        },
+        {
+          "match": "."
+        }
+      ]
+    },
+    "literal-json": {
+      "name": "string.js.taggedTemplate.literal.json",
+      "contentName": "meta.embedded.block.json",
+      "begin": "(\\bjson\\b)(`)",
+      "beginCaptures": {
+        "1": {
+          "name": "entity.name.function.tagged-template.js"
+        },
+        "2": {
+          "name": "punctuation.definition.string.template.begin.js"
+        }
+      },
+      "end": "(`)",
+      "patterns": [
+        {
+          "include": "source.json"
+        },
+        {
+          "match": "."
+        }
+      ]
+    },
+    "literal-jsonc": {
+      "name": "string.js.taggedTemplate.literal.json",
+      "contentName": "meta.embedded.block.json",
+      "begin": "(\\bjsonc\\b)(`)",
+      "beginCaptures": {
+        "1": {
+          "name": "entity.name.function.tagged-template.js"
+        },
+        "2": {
+          "name": "punctuation.definition.string.template.begin.js"
+        }
+      },
+      "end": "(`)",
+      "patterns": [
+        {
+          "include": "source.json.comments"
+        },
+        {
+          "match": "."
+        }
+      ]
+    },
+
+    "literal-less": {
+      "name": "string.js.taggedTemplate.literal.less",
+      "contentName": "meta.embedded.block.less",
+      "begin": "(\\bless\\b)(`)",
+      "beginCaptures": {
+        "1": {
+          "name": "entity.name.function.tagged-template.js"
+        },
+        "2": {
+          "name": "punctuation.definition.string.template.begin.js"
+        }
+      },
+      "end": "(`)",
+      "patterns": [
+        {
+          "include": "source.css.less"
+        },
+        {
+          "match": "."
+        }
+      ]
+    },
+    "literal-md": {
+      "name": "string.js.taggedTemplate.literal.md",
+      "contentName": "meta.embedded.block.md",
+      "begin": "(\\bmd\\b)(`)",
+      "beginCaptures": {
+        "1": {
+          "name": "entity.name.function.tagged-template.js"
+        },
+        "2": {
+          "name": "punctuation.definition.string.template.begin.js"
+        }
+      },
+      "end": "(`)",
+      "patterns": [
+        {
+          "include": "text.html.markdown"
+        },
+        {
+          "match": "."
+        }
+      ]
+    },
+    "literal-scss": {
+      "name": "string.js.taggedTemplate.literal.scss",
+      "contentName": "meta.embedded.block.scss",
+      "begin": "(\\b(?:scss|sass)\\b)(`)",
+      "beginCaptures": {
+        "1": {
+          "name": "entity.name.function.tagged-template.js"
+        },
+        "2": {
+          "name": "punctuation.definition.string.template.begin.js"
+        }
+      },
+      "end": "(`)",
+      "patterns": [
+        {
+          "include": "source.css.scss"
+        },
+        {
+          "match": "."
+        }
+      ]
+    },
+    "literal-ts": {
+      "name": "string.js.taggedTemplate.literal.ts",
+      "contentName": "meta.embedded.block.ts",
+      "begin": "(\\b(?:ts)\\b)(`)",
+      "beginCaptures": {
+        "1": {
+          "name": "entity.name.function.tagged-template.js"
+        },
+        "2": {
+          "name": "punctuation.definition.string.template.begin.js"
+        }
+      },
+      "end": "(`)",
+      "patterns": [
+        {
+          "include": "source.ts"
+        },
+        {
+          "match": "."
+        }
+      ]
+    },
+    "literal-tsx": {
+      "name": "string.js.taggedTemplate.literal.tsx",
+      "contentName": "meta.embedded.block.tsx",
+      "begin": "(\\b(?:tsx)\\b)(`)",
+      "beginCaptures": {
+        "1": {
+          "name": "entity.name.function.tagged-template.js"
+        },
+        "2": {
+          "name": "punctuation.definition.string.template.begin.js"
+        }
+      },
+      "end": "(`)",
+      "patterns": [
+        {
+          "include": "source.tsx"
+        },
+        {
+          "match": "."
+        }
+      ]
+    }
+  }
+}

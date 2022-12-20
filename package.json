@@ -1,0 +1,82 @@
+{
+  "name": "language-literals",
+  "publisher": "sissel",
+  "displayName": "Language Literals",
+  "description": "Syntax highlighting support for tagged literals",
+  "version": "0.0.1",
+  "icon": "logo.png",
+  "author": "Νίκος Σαβίδης <n.savvidis@gmx.com>",
+  "license": "MIT",
+  "keywords": [
+    "javascript",
+    "typescript",
+    "tagged",
+    "template",
+    "embedded"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/panoply/vscode-language-literals.git"
+  },
+  "bugs": {
+    "url": "https://github.com/panoply/vscode-language-literals/issues"
+  },
+  "engines": {
+    "vscode": "^1.44.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "scripts": {
+    "build": "vsce package --no-dependencies"
+  },
+  "contributes": {
+    "grammars": [
+      {
+        "injectTo": [
+          "source.js",
+          "source.js.jsx",
+          "source.jsx",
+          "source.ts",
+          "source.tsx",
+          "text.html.basic",
+          "text.html.derivative",
+          "text.html.markdown"
+        ],
+        "scopeName": "inline.template-language-literals",
+        "path": "./syntax/grammar.tmLanguage.json",
+        "embeddedLanguages": {
+          "meta.embedded.block.css": "css",
+          "meta.embedded.block.markup": "html",
+          "meta.embedded.block.xml": "xml",
+          "meta.embedded.block.yaml": "yaml",
+          "meta.embedded.block.js": "javascript",
+          "meta.embedded.block.json": "json",
+          "meta.embedded.block.jsonc": "jsonc",
+          "meta.embedded.block.less": "less",
+          "meta.embedded.block.md": "markdown",
+          "meta.embedded.block.scss": "scss",
+          "meta.embedded.block.ts": "typescript",
+          "meta.embedded.block.tsx": "typescriptreact"
+        }
+      },
+      {
+        "injectTo": [
+          "source.js",
+          "source.js.jsx",
+          "source.jsx",
+          "source.ts",
+          "source.tsx",
+          "text.html.basic",
+          "text.html.derivative",
+          "text.html.markdown"
+        ],
+        "scopeName": "inline.template-tagged-languages.injection",
+        "path": "./syntax/injection.tmLanguage.json",
+        "embeddedLanguages": {
+          "meta.template.expression.ts": "typescript"
+        }
+      }
+    ]
+  }
+}
